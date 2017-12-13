@@ -2,40 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class ItemSpawner : MonoBehaviour
 {
-
-    public Vector2 speed = new Vector2(10, 10);
-
-    /// <summary>
-    /// Moving direction
-    /// </summary>
-    public Vector2 direction = new Vector2(-1, 0);
-
-    private Vector2 movement;
-    private Rigidbody2D rigidbodyComponent;
-
-    void Update()
+    public UiManager ui;
+    [System.Serializable]
+    public class SpawnBoundary
     {
-        // 2 - Movement
-        movement = new Vector2(
-          speed.x * direction.x,
-          speed.y * direction.y);
+        public float minX, maxX;
     }
 
-    void FixedUpdate()
-    {
-        if (rigidbodyComponent == null) rigidbodyComponent = GetComponent<Rigidbody2D>();
 
-        // Apply movement to the rigidbody
-        rigidbodyComponent.velocity = movement;
-    }
+        public List<GameObject> items;
+        public float spawnTime = 1.0f;
+        public SpawnBoundary boundary;
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.name == "Nova Red")
+        // Use this for initialization
+        void Start()
         {
-            Destroy(col.gameObject);
+            // items = new List<GameObject>();
+
+            Invoke("Enemy1", Random.Range(0.0f, spawnTime));
+        }
+
+        private void SpawnItem()
+        {
+            Instantiate(
+                items[Random.Range(0, items.Count)],
+                new Vector2(Random.Range(boundary.minX, boundary.maxX), this.transform.position.y),
+                Quaternion.identity);
+
+            Invoke("Enemy1", Random.Range(0.0f, spawnTime));
         }
     }
-}
+  

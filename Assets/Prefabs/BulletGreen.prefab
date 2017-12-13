@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4881631670044296}
   - component: {fileID: 212691566452423640}
+  - component: {fileID: 114781570347736198}
   - component: {fileID: 50392866307169172}
   - component: {fileID: 58995457848390062}
   - component: {fileID: 114429071594939934}
@@ -38,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1811017548921078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.775, y: -0.778, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -89,7 +90,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbde40e6554faf24f857db9e818677ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velx: 10
+  ui: {fileID: 0}
+  velx: 25
+--- !u!114 &114781570347736198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811017548921078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312970c02f5bdb49908303f0441cd91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 0}
+  playerExplosion: {fileID: 0}
+  ScoreValue: 10
 --- !u!212 &212691566452423640
 SpriteRenderer:
   m_ObjectHideFlags: 1

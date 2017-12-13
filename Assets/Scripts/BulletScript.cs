@@ -1,20 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BulletScript : MonoBehaviour {
-
+public class BulletScript : MonoBehaviour
+{
+    public UiManager ui;
     // Use this for initialization
-    public float velx = 5f;
+    public float velx = 0.1f;
 
-    float vely = 0f;
+    float vely = 0.1f;
 
     Rigidbody2D bulletRigidbody2d;
 
     // Use this for initialization
     void Start()
     {
-
+        ui = GameObject.FindWithTag("ui").GetComponent<UiManager>();
         bulletRigidbody2d = GetComponent<Rigidbody2D>();
     }
 
@@ -27,31 +29,10 @@ public class BulletScript : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Enemygreen2")
+        if (col.gameObject.CompareTag("Enemy"))
         {
+            ui.IncrementScore();
             Destroy(col.gameObject);
         }
-
-        else if (col.gameObject.name == "Enemygreen")
-        {
-            Destroy(col.gameObject);
-        }
-        else if (col.gameObject.name == "Enemyblue2")
-        {
-            Destroy(col.gameObject);
-        }
-        else if (col.gameObject.name == "Enemyblue")
-        {
-            Destroy(col.gameObject);
-        }
-        else if (col.gameObject.name == "EnemyRed2")
-        {
-            Destroy(col.gameObject);
-        }
-        else if (col.gameObject.name == "EnemyRed1")
-        {
-            Destroy(col.gameObject);
-        }
-        
     }
 }

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Nova.unity
+- path: Assets/Scenes/Boss Level.unity
   isLoaded: 1
   isActive: 1
