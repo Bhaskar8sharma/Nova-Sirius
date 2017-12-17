@@ -29,4 +29,8 @@ public class MoveEnemy : MonoBehaviour {
         // Apply movement to the rigidbody
         rigidbodyComponent.velocity = movement;
     }
+    //private void OnCollisionEnter2D(Collision col)
+    //{
+        
+    //}
 }

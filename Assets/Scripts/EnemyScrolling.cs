@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemyScrolling : MonoBehaviour
 {
     public UiManager ui;
-    
+
     public float speed;
     Vector3 start;
-    
+
 
     void Start()
     {
@@ -24,7 +24,8 @@ public class EnemyScrolling : MonoBehaviour
         { transform.position = start; }
 
 
-     }
+    }
 
-   
+
+
 }

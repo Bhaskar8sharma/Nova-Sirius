@@ -23,10 +23,11 @@ GameObject:
   - component: {fileID: 114254885188173344}
   - component: {fileID: 50031548670243170}
   - component: {fileID: 58449156657519408}
+  - component: {fileID: 114203496096717340}
   - component: {fileID: 114043122154151314}
   m_Layer: 0
   m_Name: BulletBlue
-  m_TagString: Untagged
+  m_TagString: BlueBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,8 +91,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbde40e6554faf24f857db9e818677ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 0}
   velx: 25
+--- !u!114 &114203496096717340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1744527295681166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afc48b2902ff6a469dedd1a468bee1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114254885188173344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,6 +117,7 @@ MonoBehaviour:
   explosion: {fileID: 0}
   playerExplosion: {fileID: 0}
   ScoreValue: 10
+  gameController: {fileID: 0}
 --- !u!212 &212217004899797776
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,6 +127,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -130,6 +143,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

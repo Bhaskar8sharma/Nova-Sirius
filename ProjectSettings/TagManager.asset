@@ -11,6 +11,9 @@ TagManager:
   - Boundary
   - Boss
   - ui
+  - RedBullet
+  - BlueBullet
+  - GreenBullet
   layers:
   - Default
   - TransparentFX
