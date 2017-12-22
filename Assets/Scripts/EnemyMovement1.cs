@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScrolling : MonoBehaviour
+public class EnemyMovement1 : MonoBehaviour
 {
     public float speed;
     Vector3 start;
@@ -12,8 +12,7 @@ public class EnemyScrolling : MonoBehaviour
     }
     void Update()
     {
-
-        transform.Translate((new Vector3(-1, 1, 0)) * speed * Time.deltaTime);
+        transform.Translate((new Vector3(-1, 0, 0)) * speed * Time.deltaTime);
 
         if (transform.position.x < -22.24)
 

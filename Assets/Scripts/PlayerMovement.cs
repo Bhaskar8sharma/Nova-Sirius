@@ -35,11 +35,10 @@ public class PlayerMovement : MonoBehaviour
     public float fireRate = 0.1f;
 
     float nextFire = 0.1f;
-    
-
-    private void Awake()
+    void Awake()
     {
-        source = GetComponent<AudioSource>();
+       
+       source = GetComponent<AudioSource>();
     }
 
     // Use this for initialization
@@ -143,46 +142,31 @@ public class PlayerMovement : MonoBehaviour
     void fireBlueBullet()
     {
         bulletPos = transform.position;
-
         bulletPos += new Vector2(1f, -0.43f);
-
         Instantiate(BulletBlue, bulletPos, Quaternion.identity);
-
         SoundScript.Instance.MakePlayerShotSound();
     }
-
     void fireGreenBullet()
     {
         bulletPos = transform.position;
-
         bulletPos += new Vector2(1f, -0.43f);
-
         Instantiate(BulletGreen, bulletPos, Quaternion.identity);
-
         SoundScript.Instance.MakePlayerShotSound();
     }
-
     void fireBlackBullet()
     {
         bulletPos = transform.position;
-
         bulletPos += new Vector2(1f, -0.43f);
-
         Instantiate(BlackBullet, bulletPos, Quaternion.identity);
-
         SoundScript.Instance.MakePlayerShotSound();
     }
-
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
+            Destroy(this.gameObject);
             GameOverText.enabled = true;
             GameOverImage.enabled = true;
-            Destroy(this.gameObject);
         }
-
     }
-
 }
