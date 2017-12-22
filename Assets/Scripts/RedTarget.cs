@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RedTarget : MonoBehaviour {
 
+   
 	// Use this for initialization
 	void Start () {
 		
@@ -17,9 +18,11 @@ public class RedTarget : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("Leg"))
         {
+           
             Destroy(col.gameObject);
             Destroy(this.gameObject);
-        
+
         }
     }
+   
 }

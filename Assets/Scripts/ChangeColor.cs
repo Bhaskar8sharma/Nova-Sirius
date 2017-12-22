@@ -22,6 +22,11 @@ public class ChangeColor : MonoBehaviour, IPointerClickHandler
 	{
 		OnValueChanged(value, 2);
 	}
+
+    public void SetBlack(float value)
+    {
+        OnValueChanged(value, 3);
+    }
 	
 	public void OnValueChanged(float value, int channel)
 	{

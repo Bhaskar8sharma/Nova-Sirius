@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class UiManager : MonoBehaviour {
 
-    int score = 0;
-    public Text scoreText; 
+    int Score = 0;
+    public Text ScoreText;
+	// Use this for initialization
 	void Start () {
 		
-	}
-	
+	}	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-     public void IncrementScore()
+    public void IncrementScore()
     {
-        score++;
-        scoreText.text = "Score" + score;
+        Score++;
+        ScoreText.text = "Score: " + Score;
     }
 }

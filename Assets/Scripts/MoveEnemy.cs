@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour {
+    
 
     public Vector2 speed = new Vector2(10, 10);
 
@@ -29,8 +30,6 @@ public class MoveEnemy : MonoBehaviour {
         // Apply movement to the rigidbody
         rigidbodyComponent.velocity = movement;
     }
-    //private void OnCollisionEnter2D(Collision col)
-    //{
-        
-    //}
+    
+
 }

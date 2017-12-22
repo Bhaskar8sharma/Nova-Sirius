@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GreenTarget : MonoBehaviour
 {
-
+   
     // Use this for initialization
     void Start()
     {
@@ -20,9 +20,11 @@ public class GreenTarget : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Arm"))
         {
+
             Destroy(col.gameObject);
             Destroy(this.gameObject);
 
         }
     }
+    
 }

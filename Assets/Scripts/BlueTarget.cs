@@ -6,8 +6,8 @@ public class BlueTarget : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+       
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,6 +17,7 @@ public class BlueTarget : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("Torso"))
         {
+           
             Destroy(col.gameObject);
             Destroy(this.gameObject);
          

@@ -1,10 +1,20 @@
 fileFormatVersion: 2
 guid: cc44acd348db2a946bd6dab851260a27
-timeCreated: 1511815811
+timeCreated: 1513835459
 licenseType: Free
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - GameOverImage: {instanceID: 0}
+  - GameOverText: {instanceID: 0}
+  - shootSound: {instanceID: 0}
+  - red: {fileID: 21300000, guid: aec77bac608753c4aad42373df6b0504, type: 3}
+  - blue: {fileID: 21300000, guid: e94bdc833c239d64fb15c9049c1696ea, type: 3}
+  - green: {instanceID: 0}
+  - BulletRed: {instanceID: 0}
+  - BulletBlue: {instanceID: 0}
+  - BulletGreen: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class BulletScript : MonoBehaviour
 {
-    
+    public UiManager ui;
+   
     // Use this for initialization
     public float velx = 0.1f;
 
@@ -16,7 +18,7 @@ public class BulletScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        ui = GameObject.FindWithTag("ui").GetComponent<UiManager>();
         bulletRigidbody2d = GetComponent<Rigidbody2D>();
     }
 
@@ -34,6 +36,8 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(col.gameObject);
             Destroy(this.gameObject);
+            ui.IncrementScore();
+
         }
     }
 

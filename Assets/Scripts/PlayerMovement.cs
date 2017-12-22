@@ -4,37 +4,38 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
-    public float LevelStartDelay = 0.1f;
-    public Image Level2Image;
-    public Text Level2Text;
     public Image GameOverImage;
     public Text GameOverText;
+
     public float speed;
 
     public AudioClip shootSound;
 
     private AudioSource source;
 
-
     private Rigidbody2D myRigidBody;
 
     public Sprite red;
     public Sprite blue;
     public Sprite green;
+    public Sprite black;
 
     SpriteRenderer sr;
 
     public GameObject BulletRed;
     public GameObject BulletBlue;
     public GameObject BulletGreen;
+    public GameObject BlackBullet;
 
 
     Vector2 bulletPos;
     public float fireRate = 0.1f;
 
     float nextFire = 0.1f;
+    
 
     private void Awake()
     {
@@ -44,8 +45,6 @@ public class PlayerMovement : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        Level2Text.enabled = true;
-        Level2Image.enabled = true;
         GameOverText.enabled = false;
         GameOverImage.enabled = false;
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -59,7 +58,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             sr.sprite = red;
             nextFire = Time.time + fireRate;
-            
+
             fireRedBullet();
         }
 
@@ -67,7 +66,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             sr.sprite = blue;
             nextFire = Time.time + fireRate;
-            
+
             fireBlueBullet();
         }
 
@@ -75,10 +74,18 @@ public class PlayerMovement : MonoBehaviour {
         {
             sr.sprite = green;
             nextFire = Time.time + fireRate;
-            
+
             fireGreenBullet();
         }
-        
+
+        if (Input.GetKeyDown("w") && Time.time > nextFire)
+        {
+            sr.sprite = black;
+            nextFire = Time.time + fireRate;
+
+            fireBlackBullet();
+        }
+
         // X axis
         if (transform.position.x <= -3f)
         {
@@ -90,9 +97,9 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         // Y axis
-        if (transform.position.y <= -3.5f)
+        if (transform.position.y <= -3.3f)
         {
-            transform.position = new Vector2(transform.position.x, -3.5f);
+            transform.position = new Vector2(transform.position.x, -3.3f);
         }
         else if (transform.position.y >= 12f)
         {
@@ -101,32 +108,24 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey("left"))
         {
             transform.Translate(Vector2.left * Time.deltaTime * speed);
-            //Vector2 position = this.transform.position;
-            //position.x--;
-            //this.transform.position = position;
+
         }
         if (Input.GetKey("right"))
         {
             transform.Translate(Vector2.right * Time.deltaTime * speed);
-            //Vector2 position = this.transform.position;
-            //position.x++;
-            //this.transform.position = position;
+
         }
-            if (Input.GetKey("up"))
+        if (Input.GetKey("up"))
         {
             transform.Translate(Vector2.up * Time.deltaTime * speed);
-            //    Vector2 position = this.transform.position;
-            //    position.y++;
-            //    this.transform.position = position;
+
         }
 
         if (Input.GetKey("down"))
         {
 
             transform.Translate(Vector2.down * Time.deltaTime * speed);
-            //Vector2 position = this.transform.position;
-            //position.y--;
-            //this.transform.position = position;
+
         }
     }
     void fireRedBullet()
@@ -163,6 +162,17 @@ public class PlayerMovement : MonoBehaviour {
         SoundScript.Instance.MakePlayerShotSound();
     }
 
+    void fireBlackBullet()
+    {
+        bulletPos = transform.position;
+
+        bulletPos += new Vector2(1f, -0.43f);
+
+        Instantiate(BlackBullet, bulletPos, Quaternion.identity);
+
+        SoundScript.Instance.MakePlayerShotSound();
+    }
+
 
     private void OnCollisionEnter2D(Collision2D col)
     {
@@ -172,7 +182,7 @@ public class PlayerMovement : MonoBehaviour {
             GameOverImage.enabled = true;
             Destroy(this.gameObject);
         }
-       
+
     }
 
 }
