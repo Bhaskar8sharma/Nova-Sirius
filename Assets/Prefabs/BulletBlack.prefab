@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4326113854296580}
   - component: {fileID: 212708567542377900}
   - component: {fileID: 114371373345271768}
-  - component: {fileID: 50416839466187382}
   - component: {fileID: 58424342188019738}
   - component: {fileID: 114445339978623738}
+  - component: {fileID: 50608953929762000}
   m_Layer: 0
   m_Name: BulletBlack
   m_TagString: GreenBullet
@@ -38,13 +38,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1782930656384050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.775, y: -0.778, z: 0}
-  m_LocalScale: {x: 5.5, y: 5.5, z: 0}
+  m_LocalPosition: {x: 148.385, y: -28.157, z: 0}
+  m_LocalScale: {x: 15, y: 15, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50416839466187382
+--- !u!50 &50608953929762000
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1

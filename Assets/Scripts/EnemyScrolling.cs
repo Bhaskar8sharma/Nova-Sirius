@@ -13,7 +13,7 @@ public class EnemyScrolling : MonoBehaviour
     void Update()
     {
 
-        transform.Translate((new Vector3(-1, 1, 0)) * speed * Time.deltaTime);
+        transform.Translate((new Vector3(-1, 0, 0)) * speed * Time.deltaTime);
 
         if (transform.position.x < -22.24)
 

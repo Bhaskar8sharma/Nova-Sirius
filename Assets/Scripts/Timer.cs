@@ -22,10 +22,10 @@ public class Timer : MonoBehaviour
         if (timeLeft <= 0)
         {
             StopCoroutine("LoseTime");
-            countdownText.text = "Times Up! Right click to go to next level";
+            countdownText.text = "Times Up!";
         }
     }
-
+ 
     IEnumerator LoseTime()
     {
         while (true)

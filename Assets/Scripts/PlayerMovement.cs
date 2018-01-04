@@ -85,24 +85,24 @@ public class PlayerMovement : MonoBehaviour
             fireBlackBullet();
         }
 
-        // X axis
-        if (transform.position.x <= -3f)
-        {
-            transform.position = new Vector2(-3f, transform.position.y);
-        }
-        else if (transform.position.x >= 10.6f)
-        {
-            transform.position = new Vector2(10.6f, transform.position.y);
-        }
+        //// X axis
+        //if (transform.position.x <= -3f)
+        //{
+        //    transform.position = new Vector2(-3f, transform.position.y);
+        //}
+        //else if (transform.position.x >= 10.6f)
+        //{
+        //    transform.position = new Vector2(10.6f, transform.position.y);
+        //}
 
         // Y axis
-        if (transform.position.y <= -3.3f)
+        if (transform.position.y <= -2.5f)
         {
-            transform.position = new Vector2(transform.position.x, -3.3f);
+            transform.position = new Vector2(transform.position.x, -2.5f);
         }
-        else if (transform.position.y >= 12f)
+        else if (transform.position.y >= 25f)
         {
-            transform.position = new Vector2(transform.position.x, 12f);
+            transform.position = new Vector2(transform.position.x, 25f);
         }
         if (Input.GetKey("left"))
         {

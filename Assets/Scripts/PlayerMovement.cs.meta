@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cc44acd348db2a946bd6dab851260a27
-timeCreated: 1513835459
+timeCreated: 1515000647
 licenseType: Free
 MonoImporter:
   externalObjects: {}
@@ -11,10 +11,12 @@ MonoImporter:
   - shootSound: {instanceID: 0}
   - red: {fileID: 21300000, guid: aec77bac608753c4aad42373df6b0504, type: 3}
   - blue: {fileID: 21300000, guid: e94bdc833c239d64fb15c9049c1696ea, type: 3}
-  - green: {instanceID: 0}
+  - green: {fileID: 21300000, guid: 2a73871a87144a84da9aa6abe74617da, type: 3}
+  - black: {instanceID: 0}
   - BulletRed: {instanceID: 0}
   - BulletBlue: {instanceID: 0}
   - BulletGreen: {instanceID: 0}
+  - BlackBullet: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
