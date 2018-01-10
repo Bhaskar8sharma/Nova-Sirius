@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
         if (timeLeft <= 0)
         {
             StopCoroutine("LoseTime");
-            countdownText.text = "Times Up!";
+            countdownText.text = "Times Up! Press Escape to exit";
         }
     }
  

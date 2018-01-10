@@ -71,9 +71,9 @@ public class PlayerMovementL1 : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, -2.5f);
         }
-        else if (transform.position.y >= 25f)
+        else if (transform.position.y >= 45f)
         {
-            transform.position = new Vector2(transform.position.x, 25f);
+            transform.position = new Vector2(transform.position.x, 45f);
         }
         if (Input.GetKey("left"))
         {
