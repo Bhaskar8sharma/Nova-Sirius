@@ -7,9 +7,9 @@ public class Exit : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) // this gives you access to the back button
+        if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            Application.Quit(); // this quits the game.
+            Application.Quit(); 
         }
     }
 }
